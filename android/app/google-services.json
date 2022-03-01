@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "670416613437",
+    "project_id": "seltzerauth",
+    "storage_bucket": "seltzerauth.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:670416613437:android:c83d71eaf082089884ba54",
+        "android_client_info": {
+          "package_name": "com.example.seltzer_build1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "670416613437-glbps36amjbjq7j9cnae6odu1nlpa0uu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.seltzer_build1",
+            "certificate_hash": "7bdc0bfb6f4b23cb2f0469b9365101ce6cc928b7"
+          }
+        },
+        {
+          "client_id": "670416613437-nda2i3assn1ovnjtih5ados1n3gk6put.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4K8wyAiN5l-YtoYjM4lswn_35697FwmI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "670416613437-nda2i3assn1ovnjtih5ados1n3gk6put.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

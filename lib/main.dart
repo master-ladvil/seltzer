@@ -3,7 +3,7 @@ import 'screens/login.dart';
 import 'screens/homescreen.dart';
 void main() {
   runApp(MaterialApp(
-    title: ' Email and password Login',
+    title: ' Seltzer ',
     theme: ThemeData(
       primarySwatch: Colors.amber,
 
