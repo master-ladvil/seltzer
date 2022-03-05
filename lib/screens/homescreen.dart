@@ -1,4 +1,8 @@
+import 'dart:convert';
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:http/http.dart';
 
 import 'login.dart';
 
@@ -10,12 +14,37 @@ class Homescreen extends StatefulWidget {
 }
 
 class _HomescreenState extends State<Homescreen> {
-  
+
+  final url = "https://seltzer.herokuapp.com/reg/doc";
+
+  var _postjson = [];
+
+  void fetchdoctors() async {
+    try {
+      final response = await get(Uri.parse(url));
+      final jsondata = jsonDecode(response.body) as List;
+
+      setState(() {
+        _postjson = jsondata;
+      });
+
+    }catch(err){}
+  }
+
   @override
-  
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    fetchdoctors();
+  }
+
+  @override
+
   Widget build(BuildContext context) {
     final screenheight = MediaQuery.of(context).size.height;
+    final post = _postjson[0];
     return Scaffold(
+
       backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text("Welcome Doc",
@@ -32,18 +61,18 @@ class _HomescreenState extends State<Homescreen> {
                 child: Image.asset("as/seltzer.png", fit: BoxFit.contain,),
               ),
               SizedBox(height: screenheight*0.05,),
-              Text("Welcome Doc",
+              Text("Welcome ${post["fullname"]}",
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold
               ),),
               SizedBox(height: screenheight*0.03,),
-              Text("Name",
+              Text("Doc Id: ${post["doctorId"]}",
                 style: TextStyle(
                     fontSize: 10,
                 ),),
               SizedBox(height: screenheight*0.01,),
-              Text("Email@domain.com",
+              Text("Email : ${post["email"]}",
                 style: TextStyle(
                   fontSize: 10,
                 )),

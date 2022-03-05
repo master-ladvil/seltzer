@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:seltzer_build1/screens/docscreen.dart';
 import 'package:seltzer_build1/screens/homescreen.dart';
 import 'package:seltzer_build1/screens/registration.dart';
 
@@ -75,7 +76,7 @@ class _LoginState extends State<Login> {
         padding: EdgeInsets.fromLTRB(20, 15, 20, 15) ,
         minWidth: MediaQuery.of(context).size.width,
         onPressed: () {
-          Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Homescreen()));
+          Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Docscreen()));
         },
         child: Text("Login", textAlign: TextAlign.center,
         style: TextStyle(

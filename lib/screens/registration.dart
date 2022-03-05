@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:seltzer_build1/widgets/bottombar.dart';
 
 class Registrationscreen extends StatefulWidget {
   const Registrationscreen({Key? key}) : super(key: key);
@@ -30,7 +31,7 @@ class _RegistrationscreenState extends State<Registrationscreen> {
 
     final double heightofscreeen = MediaQuery.of(context).size.height;
 
-    final firstnamefield = TextFormField(
+    final fullnamefield = TextFormField(
 
       autofocus: false,
       controller: controller = firstnameeditingcontroller,
@@ -43,32 +44,13 @@ class _RegistrationscreenState extends State<Registrationscreen> {
       decoration: InputDecoration(
           prefixIcon: Icon(Icons.person_sharp),
           contentPadding: EdgeInsets.fromLTRB(20, 15, 20, 15),
-          hintText: "FirstName",
+          hintText: "FullName",
           border: UnderlineInputBorder(
               borderRadius: BorderRadius.circular(10)
           )
       ),
     );
 
-    final secondnamefield = TextFormField(
-
-      autofocus: false,
-      controller: controller = secondmameeditingcontroller,
-      keyboardType: TextInputType.name,
-      //validator () {}
-      onSaved: (value) {
-        secondmameeditingcontroller.text = value!;
-      },
-      textInputAction: TextInputAction.next,
-      decoration: InputDecoration(
-          prefixIcon: Icon(Icons.person_sharp),
-          contentPadding: EdgeInsets.fromLTRB(20, 15, 20, 15),
-          hintText: "SecondName",
-          border: UnderlineInputBorder(
-              borderRadius: BorderRadius.circular(10)
-          )
-      ),
-    );
 
     final hospitalnamefield = TextFormField(
 
@@ -193,47 +175,45 @@ class _RegistrationscreenState extends State<Registrationscreen> {
 
       backgroundColor: Colors.white,
       body: Center(
-        child: SingleChildScrollView(
-          child: Container(
+      child: SingleChildScrollView(
+        child: Container(
 
-            color: Colors.white,
-            child :Padding(
-              padding: const EdgeInsets.all(36),
-              child: Form(
-                key : _formkey,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: <Widget>[
+          color: Colors.white,
+          child :Padding(
+            padding: const EdgeInsets.all(36),
+            child: Form(
+              key : _formkey,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
 
-                    SizedBox(
-                      height: heightofscreeen * 0.13,
-                      child: Image.asset('as/seltzer.png',
-                        fit: BoxFit.contain,),
-                    ),
-                    SizedBox(height: heightofscreeen * 0.04,),
-                    firstnamefield,
-                    SizedBox(height: heightofscreeen * 0.029,),
-                    secondnamefield,
-                    SizedBox(height: heightofscreeen * 0.029),
-                    hospitalnamefield,
-                    SizedBox(height: heightofscreeen * 0.029,),
-                    doctoridfield,
-                    SizedBox(height: heightofscreeen * 0.029,),
-                    emailfeld,
-                    SizedBox(height: heightofscreeen * 0.029,),
-                    passwordfield,
-                    SizedBox(height: heightofscreeen * 0.029,),
-                    confirmpasswordfield,
-                    SizedBox(height: heightofscreeen * 0.038,),
-                    signupbutton
-                    ],
-                ),
+                  SizedBox(
+                    height: heightofscreeen * 0.13,
+                    child: Image.asset('as/seltzer.png',
+                      fit: BoxFit.contain,),
+                  ),
+                  SizedBox(height: heightofscreeen * 0.04,),
+                  fullnamefield,
+                  SizedBox(height: heightofscreeen * 0.029),
+                  hospitalnamefield,
+                  SizedBox(height: heightofscreeen * 0.029,),
+                  doctoridfield,
+                  SizedBox(height: heightofscreeen * 0.029,),
+                  emailfeld,
+                  SizedBox(height: heightofscreeen * 0.029,),
+                  passwordfield,
+                  SizedBox(height: heightofscreeen * 0.029,),
+                  confirmpasswordfield,
+                  SizedBox(height: heightofscreeen * 0.038,),
+                  signupbutton
+                  ],
               ),
             ),
           ),
         ),
       ),
-    );;
+        ),
+    );
   }
 }
