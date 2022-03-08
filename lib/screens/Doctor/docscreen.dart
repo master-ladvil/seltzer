@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../widgets/bottombar.dart';
-import 'login.dart';
+import '../../widgets/bottombar.dart';
+import '../login.dart';
 
 
 class Docscreen extends StatefulWidget {

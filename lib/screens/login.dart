@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:seltzer_build1/screens/docscreen.dart';
+import 'package:seltzer_build1/screens/Doctor/docscreen.dart';
 import 'package:seltzer_build1/screens/homescreen.dart';
 import 'package:seltzer_build1/screens/registration.dart';
+import 'package:seltzer_build1/screens/role.dart';
 
 class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
@@ -129,7 +130,7 @@ class _LoginState extends State<Login> {
                       GestureDetector(onTap: (){
                         Navigator.push(context,
                             MaterialPageRoute(builder: (context) =>
-                                Registrationscreen()));
+                                Roleselection()));
                       },
                         child: Text("Signup",
                         style: TextStyle(
