@@ -61,7 +61,7 @@ class _BottombarState extends State<Bottombar> {
                   ),
                   Center(
                       heightFactor: 0.6,
-                      child: FloatingActionButton(onPressed: () {Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => (Prescriptionscreen())));},
+                      child: FloatingActionButton(onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => (Prescriptionscreen())));},
 
                         backgroundColor: Colors.amber,
                         child: Icon(Icons.add,color: Colors.white,),)),

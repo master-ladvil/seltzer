@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+//import 'dart:ui';
+//import 'package:get/get.dart';
+
+
+
 
 class Prescriptionscreen extends StatefulWidget {
   const Prescriptionscreen({Key? key}) : super(key: key);
@@ -17,6 +22,12 @@ class _PrescriptionscreenState extends State<Prescriptionscreen> {
   final drugnamecontroller = new TextEditingController();
   final dosecontroller = new TextEditingController();
   final quantitycontroller = new TextEditingController();
+
+  final tpatientnameandidcontroller = new TextEditingController();
+  final tpatientidcontroller = new TextEditingController();
+  final tdrugnamecontroller = new TextEditingController();
+  final tdosecontroller = new TextEditingController();
+  final tquantitycontroller = new TextEditingController();
 
 
 
@@ -43,6 +54,7 @@ class _PrescriptionscreenState extends State<Prescriptionscreen> {
   bool lvalue2 = false;
   bool lbeforefood = false;
   bool lafterfood = false;
+
 
   //final datecontroller  = new TextEditingController();
   //final doctorIDeditingcontroller = new TextEditingController();
@@ -75,6 +87,7 @@ class _PrescriptionscreenState extends State<Prescriptionscreen> {
           ),
         ),
       ),
+
       Expanded(
         child: TextFormField(
           autofocus: false,
@@ -83,6 +96,50 @@ class _PrescriptionscreenState extends State<Prescriptionscreen> {
           //validator () {}
           onSaved: (value) {
             patientidcontroller.text = value!;
+          },
+          textInputAction: TextInputAction.next,
+          decoration: InputDecoration(
+              prefixIcon: Icon(Icons.credit_card_outlined),
+              contentPadding: EdgeInsets.fromLTRB(20, 15, 20, 15),
+              hintText: "Patient ID",
+              border: UnderlineInputBorder(
+                  borderRadius: BorderRadius.circular(10)
+              )
+          ),
+        ),
+      ),
+    ]);
+
+    final tpatientnameandid = Row(children:[
+      Expanded(
+        child: TextFormField(
+          autofocus: false,
+          controller: controller = tpatientnameandidcontroller,
+          keyboardType: TextInputType.name,
+          //validator () {}
+          onSaved: (value) {
+            tpatientnameandidcontroller.text = value!;
+          },
+          textInputAction: TextInputAction.next,
+          decoration: InputDecoration(
+              prefixIcon: Icon(Icons.person),
+              contentPadding: EdgeInsets.fromLTRB(20, 15, 20, 15),
+              hintText: "PatientName",
+              border: UnderlineInputBorder(
+                  borderRadius: BorderRadius.circular(10)
+              )
+          ),
+        ),
+      ),
+
+      Expanded(
+        child: TextFormField(
+          autofocus: false,
+          controller: controller = tpatientidcontroller,
+          keyboardType: TextInputType.name,
+          //validator () {}
+          onSaved: (value) {
+            tpatientidcontroller.text = value!;
           },
           textInputAction: TextInputAction.next,
           decoration: InputDecoration(
@@ -123,11 +180,11 @@ class _PrescriptionscreenState extends State<Prescriptionscreen> {
       children: [
         TextFormField(
           autofocus: false,
-          controller: controller = drugnamecontroller,
+          controller: controller = tdrugnamecontroller,
           keyboardType: TextInputType.name,
           //validator () {}
           onSaved: (value) {
-            drugnamecontroller.text = value!;
+            tdrugnamecontroller.text = value!;
           },
           textInputAction: TextInputAction.next,
           decoration: InputDecoration(
@@ -188,11 +245,11 @@ class _PrescriptionscreenState extends State<Prescriptionscreen> {
       children: [
         Expanded(child: TextFormField(
           autofocus: false,
-          controller: controller = dosecontroller,
+          controller: controller = tdosecontroller,
           keyboardType: TextInputType.name,
           //validator () {}
           onSaved: (value) {
-            dosecontroller.text = value!;
+            tdosecontroller.text = value!;
           },
           textInputAction: TextInputAction.next,
           decoration: InputDecoration(
@@ -206,11 +263,11 @@ class _PrescriptionscreenState extends State<Prescriptionscreen> {
         )),
         Expanded(child: TextFormField(
           autofocus: false,
-          controller: controller = quantitycontroller,
+          controller: controller = tquantitycontroller,
           keyboardType: TextInputType.name,
           //validator () {}
           onSaved: (value) {
-            quantitycontroller.text = value!;
+            tquantitycontroller.text = value!;
           },
           textInputAction: TextInputAction.next,
           decoration: InputDecoration(
@@ -389,7 +446,9 @@ class _PrescriptionscreenState extends State<Prescriptionscreen> {
         padding: EdgeInsets.fromLTRB(20, 15, 20, 15) ,
         minWidth: MediaQuery.of(context).size.width * 0.7,
         height : MediaQuery.of(context).size.height * 0.01,
-        onPressed: () {},
+        onPressed: () {
+
+        },//Get.snackbar("Hi", "I'm modern snackbar");},
         child: Text("Submit", textAlign: TextAlign.center,
           style: TextStyle(
               color: Colors.white,
@@ -441,4 +500,5 @@ class _PrescriptionscreenState extends State<Prescriptionscreen> {
       )
     );
   }
+
 }
