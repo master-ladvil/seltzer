@@ -22,6 +22,52 @@ class _PrescriptionscreenState extends State<Prescriptionscreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    final size = MediaQuery.of(context).size;
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Enter prescription",
+          style : TextStyle(color: Colors.white), ),centerTitle: true,
+      ),
+      /*body: Center(
+        child: SingleChildScrollView(
+          child: Container(
+
+            color: Colors.white,
+            child :Padding(
+              padding: const EdgeInsets.all(36),
+              child: Form(
+                key : _formkey,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+
+                    SizedBox(
+                      height: heightofscreeen * 0.13,
+                      child: Image.asset('as/seltzer.png',
+                        fit: BoxFit.contain,),
+                    ),
+                    SizedBox(height: size.height * 0.04,),
+                    fullnamefield,
+                    SizedBox(height: size.height * 0.029),
+                    hospitalnamefield,
+                    SizedBox(height: size.height * 0.029,),
+                    doctoridfield,
+                    SizedBox(height: size.height * 0.029,),
+                    emailfeld,
+                    SizedBox(height: size.height * 0.029,),
+                    passwordfield,
+                    SizedBox(height: size.height * 0.029,),
+                    confirmpasswordfield,
+                    SizedBox(height: size.height * 0.038,),
+                    signupbutton
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),*/
+    );
   }
 }

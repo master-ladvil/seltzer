@@ -3,6 +3,7 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:seltzer_build1/screens/Doctor/prescription.dart';
 
 
 
@@ -60,7 +61,7 @@ class _BottombarState extends State<Bottombar> {
                   ),
                   Center(
                       heightFactor: 0.6,
-                      child: FloatingActionButton(onPressed: () {},
+                      child: FloatingActionButton(onPressed: () {Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => (Prescriptionscreen())));},
 
                         backgroundColor: Colors.amber,
                         child: Icon(Icons.add,color: Colors.white,),)),
@@ -71,7 +72,7 @@ class _BottombarState extends State<Bottombar> {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         IconButton(onPressed: (){
-//Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => ()));
+                          //Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => (Prescriptionscreen())));
                         }, icon: Icon(Icons.home)),
                         Container(width: size.width*0.01),
                         IconButton(onPressed: (){}, icon: Icon(Icons.person))
