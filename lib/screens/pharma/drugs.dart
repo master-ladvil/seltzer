@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+
 import 'package:seltzer_build1/color_filters.dart';
+import 'package:seltzer_build1/screens/pharma/presdoop.dart';
 
 class Drugscreen extends StatefulWidget {
   const Drugscreen({Key? key}) : super(key: key);
@@ -100,13 +102,15 @@ class _DrugscreenState extends State<Drugscreen> {
     child: Stack(
       alignment: Alignment.bottomLeft,
       children: [
-        Ink.image(image: AssetImage("as/presdoop.jpg"),
-        colorFilter: ColorFilters.greyscale,
-        child: InkWell(
-          onTap: (){},
+        Container(
+          child: Ink.image(image: AssetImage("as/presdoop.jpg"),
+          colorFilter: ColorFilters.greyscale,
+          child: InkWell(
+            onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) => (Presdoop())));},
+          ),
+          height: 240,
+          fit: BoxFit.cover,),
         ),
-        height: 240,
-        fit: BoxFit.cover,),
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: Text(
