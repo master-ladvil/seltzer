@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:seltzer_build1/screens/pharma/widget/bottomnav.dart';
 
+import '../login.dart';
+
 
 class Pharmascreen extends StatefulWidget {
   const Pharmascreen({Key? key}) : super(key: key);
@@ -51,7 +53,7 @@ class _PharmascreenState extends State<Pharmascreen> {
                         )),
                     SizedBox(height: 15,),
                     ActionChip(label: Text("logout"), onPressed: (){
-                      //Navigator.push(context, MaterialPageRoute(builder: (context) => Login()));
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => Login()));
                     },
                       backgroundColor: Colors.amber,
                     )

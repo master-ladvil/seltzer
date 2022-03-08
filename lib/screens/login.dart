@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:seltzer_build1/screens/Doctor/docscreen.dart';
-import 'package:seltzer_build1/screens/homescreen.dart';
+
+import 'package:seltzer_build1/screens/pharma/pharmascreen.dart';
 import 'package:seltzer_build1/screens/registration.dart';
 import 'package:seltzer_build1/screens/role.dart';
 

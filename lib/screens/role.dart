@@ -94,7 +94,7 @@ class _RoleselectionState extends State<Roleselection> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text("Welcome Doc",
+        title: Text("Select your role",
           style : TextStyle(color: Colors.white), ),centerTitle: true,
       ),
       body: Center(
