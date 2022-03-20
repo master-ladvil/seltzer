@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:seltzer_build1/widgets/bottombar.dart';
+import 'package:seltzer_build1/screens/Doctor/widget/bottombar.dart';
 
 class Registrationscreen extends StatefulWidget {
   const Registrationscreen({Key? key}) : super(key: key);

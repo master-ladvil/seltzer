@@ -4,6 +4,7 @@ import 'package:seltzer_build1/screens/Doctor/docscreen.dart';
 import 'package:seltzer_build1/screens/pharma/pharmascreen.dart';
 import 'package:seltzer_build1/screens/registration.dart';
 import 'package:seltzer_build1/screens/role.dart';
+import 'package:seltzer_build1/screens/roleselection.dart';
 
 class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
@@ -78,7 +79,7 @@ class _LoginState extends State<Login> {
         padding: EdgeInsets.fromLTRB(20, 15, 20, 15) ,
         minWidth: MediaQuery.of(context).size.width,
         onPressed: () {
-          Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Docscreen()));
+          Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => PostRoleselection()));
         },
         child: Text("Login", textAlign: TextAlign.center,
         style: TextStyle(
