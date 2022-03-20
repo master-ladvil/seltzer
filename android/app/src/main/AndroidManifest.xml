@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.seltzer_build1">
+    <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
    <application
         android:label="seltzer_build1"
         android:icon="@mipmap/ic_launcher">

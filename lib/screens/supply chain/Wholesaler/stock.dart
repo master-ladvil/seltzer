@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:seltzer_build1/screens/supply%20chain/Wholesaler/salerscreen.dart';
+
+import '../../../API/local_auth_api.dart';
 
 class Manastock extends StatefulWidget {
   const Manastock({Key? key}) : super(key: key);
@@ -99,8 +102,11 @@ class _ManastockState extends State<Manastock> {
         padding: EdgeInsets.fromLTRB(20, 15, 20, 15) ,
         minWidth: MediaQuery.of(context).size.width * 0.7,
         height : MediaQuery.of(context).size.height * 0.01,
-        onPressed: () {
-
+        onPressed: ()  async {
+          final isAuthenticated = await LocalAuthApi.authenticate();
+          if (isAuthenticated) {
+            Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => Salerscreen()));
+          }
         },
         child: Text("Submit", textAlign: TextAlign.center,
           style: TextStyle(

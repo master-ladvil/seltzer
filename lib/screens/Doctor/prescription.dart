@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:seltzer_build1/API/local_auth_api.dart';
+import 'package:seltzer_build1/screens/Doctor/docscreen.dart';
 //import 'dart:ui';
 //import 'package:get/get.dart';
 
@@ -446,9 +448,12 @@ class _PrescriptionscreenState extends State<Prescriptionscreen> {
         padding: EdgeInsets.fromLTRB(20, 15, 20, 15) ,
         minWidth: MediaQuery.of(context).size.width * 0.7,
         height : MediaQuery.of(context).size.height * 0.01,
-        onPressed: () {
-
-        },//Get.snackbar("Hi", "I'm modern snackbar");},
+        onPressed: () async {
+          final isAuthenticated = await LocalAuthApi.authenticate();
+          if (isAuthenticated) {
+            Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => Docscreen()));
+          }
+        },
         child: Text("Submit", textAlign: TextAlign.center,
           style: TextStyle(
               color: Colors.white,
