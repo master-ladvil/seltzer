@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:seltzer_build1/screens/supply%20chain/Retailer/stock.dart';
 
 
 
@@ -57,7 +58,7 @@ class _RetailerBottombarState extends State<RetailerBottombar> {
                     ),
                     Center(
                         heightFactor: 0.6,
-                        child: FloatingActionButton(onPressed: () {//Navigator.push(context, MaterialPageRoute(builder: (context) => (Prescriptionscreen())));
+                        child: FloatingActionButton(onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => (Manastock())));
                         },
 
                           backgroundColor: Colors.amber,

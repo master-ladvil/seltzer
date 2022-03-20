@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:seltzer_build1/screens/patient/patient.dart';
 import 'package:seltzer_build1/screens/pharma/pharmascreen.dart';
 import 'package:seltzer_build1/screens/registration.dart';
 import 'package:seltzer_build1/screens/supply%20chain/Retailer/retailerscreen.dart';
@@ -47,7 +48,7 @@ class _PostRoleselectionState extends State<PostRoleselection> {
         minWidth: MediaQuery.of(context).size.width * 0.7,
 
         onPressed: () {
-          //  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Docscreen()));
+           Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Patscreen()));
         },
         child: Text("Patient", textAlign: TextAlign.center,
           style: TextStyle(
