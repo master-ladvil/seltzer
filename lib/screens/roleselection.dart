@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:seltzer_build1/screens/pharma/pharmascreen.dart';
 import 'package:seltzer_build1/screens/registration.dart';
+import 'package:seltzer_build1/screens/supply%20chain/Retailer/retailerscreen.dart';
+import 'package:seltzer_build1/screens/supply%20chain/Wholesaler/salerscreen.dart';
+import 'package:seltzer_build1/screens/supply%20chain/manafacturer/manafacturerscreen.dart';
 
 import 'Doctor/docscreen.dart';
 
@@ -82,7 +85,7 @@ class _PostRoleselectionState extends State<PostRoleselection> {
           padding: EdgeInsets.fromLTRB(20, 15, 20, 15) ,
           minWidth: MediaQuery.of(context).size.width*0.7,
           onPressed: () {
-           // Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Pharmascreen()));
+            Navigator.push(context, MaterialPageRoute(builder: (context) => Retailerscreen()));
           },
           child: Text("retailer", textAlign: TextAlign.center,
             style: TextStyle(
@@ -100,7 +103,7 @@ class _PostRoleselectionState extends State<PostRoleselection> {
         padding: EdgeInsets.fromLTRB(20, 15, 20, 15) ,
         minWidth: MediaQuery.of(context).size.width*0.7,
         onPressed: () {
-         // Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Pharmascreen()));
+          Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Manascreen()));
         },
         child: Text("Manafacturer", textAlign: TextAlign.center,
           style: TextStyle(
@@ -118,7 +121,7 @@ class _PostRoleselectionState extends State<PostRoleselection> {
         padding: EdgeInsets.fromLTRB(20, 15, 20, 15) ,
         minWidth: MediaQuery.of(context).size.width*0.7,
         onPressed: () {
-          //Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Docscreen()));
+          Navigator.push(context, MaterialPageRoute(builder: (context) => Salerscreen()));
         },
         child: Text("Wholesaler", textAlign: TextAlign.center,
           style: TextStyle(

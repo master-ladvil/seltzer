@@ -60,6 +60,9 @@ flutter:
      - as/presdoop.jpg
      - as/presdoop2.png
      - as/presdoop3.png
+     - as/wholesaler.png
+     - as/retailer.png
+     - as/mana.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
