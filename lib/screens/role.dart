@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:seltzer_build1/screens/registration.dart';
+import 'package:seltzer_build1/screens/supply%20chain/Retailer/retailerscreen.dart';
+import 'package:seltzer_build1/screens/supply%20chain/Wholesaler/salerscreen.dart';
+import 'package:seltzer_build1/screens/supply%20chain/manafacturer/manafacturerscreen.dart';
 
 import 'Doctor/docscreen.dart';
 
@@ -71,6 +74,42 @@ class _RoleselectionState extends State<Roleselection> {
       ),
 
     );
+    final retailerbutton = Material(
+      elevation: 5,
+      borderRadius: BorderRadius.circular(30),
+      color: Colors.amber,
+      child : MaterialButton(
+        padding: EdgeInsets.fromLTRB(20, 15, 20, 15) ,
+        minWidth: MediaQuery.of(context).size.width*0.7,
+        onPressed: () {
+          //Navigator.push(context, MaterialPageRoute(builder: (context) => Retailerscreen()));
+        },
+        child: Text("retailer", textAlign: TextAlign.center,
+          style: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.bold
+          ),),
+      ),
+    );
+
+    final manafacturerbutton = Material(
+      elevation: 5,
+      borderRadius: BorderRadius.circular(30),
+      color: Colors.amber,
+      child : MaterialButton(
+        padding: EdgeInsets.fromLTRB(20, 15, 20, 15) ,
+        minWidth: MediaQuery.of(context).size.width*0.7,
+        onPressed: () {
+          //Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Manascreen()));
+        },
+        child: Text("Manafacturer", textAlign: TextAlign.center,
+          style: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.bold
+          ),),
+      ),
+    );
+
     final wholesaler = Material(
       elevation: 5,
       borderRadius: BorderRadius.circular(30),
@@ -79,7 +118,7 @@ class _RoleselectionState extends State<Roleselection> {
         padding: EdgeInsets.fromLTRB(20, 15, 20, 15) ,
         minWidth: MediaQuery.of(context).size.width*0.7,
         onPressed: () {
-          //Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Docscreen()));
+          //Navigator.push(context, MaterialPageRoute(builder: (context) => Salerscreen()));
         },
         child: Text("Wholesaler", textAlign: TextAlign.center,
           style: TextStyle(
@@ -111,10 +150,15 @@ class _RoleselectionState extends State<Roleselection> {
             docbutton,
             SizedBox(height: size.height * 0.029,),
             patientbutton,
+
             SizedBox(height: size.height * 0.029,),
-            pharmbutton,
+            retailerbutton,
+
             SizedBox(height: size.height * 0.029,),
-            wholesaler
+            wholesaler,
+
+            SizedBox(height: size.height * 0.029,),
+            manafacturerbutton
           ],
         ),
       ),

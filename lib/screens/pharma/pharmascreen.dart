@@ -42,7 +42,7 @@ class _PharmascreenState extends State<Pharmascreen> {
                           fontWeight: FontWeight.bold
                       ),),
                     SizedBox(height: size.height*0.03,),
-                    Text("Pharma Id: 545454",
+                    Text("Retailer Id: 545454",
                       style: TextStyle(
                         fontSize: 10,
                       ),),

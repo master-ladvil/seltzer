@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:seltzer_build1/screens/Doctor/prescription.dart';
+import 'package:seltzer_build1/screens/supply%20chain/Wholesaler/stock.dart';
 
 
 
@@ -57,7 +58,7 @@ class _SalerBottombarState extends State<SalerBottombar> {
                     ),
                     Center(
                         heightFactor: 0.6,
-                        child: FloatingActionButton(onPressed: () {//Navigator.push(context, MaterialPageRoute(builder: (context) => (Prescriptionscreen())));
+                        child: FloatingActionButton(onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => (Wholestock())));
                           },
 
                           backgroundColor: Colors.amber,

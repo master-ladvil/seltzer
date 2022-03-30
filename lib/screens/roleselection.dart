@@ -86,7 +86,7 @@ class _PostRoleselectionState extends State<PostRoleselection> {
           padding: EdgeInsets.fromLTRB(20, 15, 20, 15) ,
           minWidth: MediaQuery.of(context).size.width*0.7,
           onPressed: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context) => Retailerscreen()));
+            Navigator.push(context, MaterialPageRoute(builder: (context) => Pharmascreen()));
           },
           child: Text("retailer", textAlign: TextAlign.center,
             style: TextStyle(
@@ -155,11 +155,10 @@ class _PostRoleselectionState extends State<PostRoleselection> {
             SizedBox(height: size.height * 0.029,),
             patientbutton,
             SizedBox(height: size.height * 0.029,),
-            pharmbutton,
+            retailerbutton,
             SizedBox(height: size.height * 0.029,),
             wholesaler,
-            SizedBox(height: size.height * 0.029,),
-            retailerbutton,
+
             SizedBox(height: size.height * 0.029,),
             manafacturerbutton
           ],

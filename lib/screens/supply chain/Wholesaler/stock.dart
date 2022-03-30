@@ -3,14 +3,14 @@ import 'package:seltzer_build1/screens/supply%20chain/Wholesaler/salerscreen.dar
 
 import '../../../API/local_auth_api.dart';
 
-class Manastock extends StatefulWidget {
-  const Manastock({Key? key}) : super(key: key);
+class Wholestock extends StatefulWidget {
+  const Wholestock({Key? key}) : super(key: key);
 
   @override
-  _ManastockState createState() => _ManastockState();
+  _WholestockState createState() => _WholestockState();
 }
 
-class _ManastockState extends State<Manastock> {
+class _WholestockState extends State<Wholestock> {
 
   final _formkey = GlobalKey<FormState>();
   //controlers

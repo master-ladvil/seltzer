@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:seltzer_build1/screens/patient/presscreen.dart';
 
 
 
@@ -57,8 +58,7 @@ class _PatBottombarState extends State<PatBottombar> {
                     ),
                     Center(
                         heightFactor: 0.6,
-                        child: FloatingActionButton(onPressed: () {//Navigator.push(context, MaterialPageRoute(builder: (context) => (Prescriptionscreen())));
-                        },
+                        child: FloatingActionButton(onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => (PDrugscreen())));},
 
                           backgroundColor: Colors.amber,
                           child: Icon(Icons.search,color: Colors.white,),)),
