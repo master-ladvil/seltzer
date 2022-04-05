@@ -38,6 +38,7 @@ class _LoginState extends State<Login> {
       //validator () {}
       onSaved: (value) {
         emailcontroller.text = value!;
+        print(emailcontroller.text);
       },
       textInputAction: TextInputAction.next,
       decoration: InputDecoration(
@@ -142,7 +143,9 @@ class _LoginState extends State<Login> {
 
                       )
                     ],
-                  ),],
+                  ),
+
+                  ],
                 ),
               ),
             ),

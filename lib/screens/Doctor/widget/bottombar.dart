@@ -3,6 +3,7 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:seltzer_build1/screens/Doctor/docscreen.dart';
 import 'package:seltzer_build1/screens/Doctor/prescription.dart';
 
 
@@ -72,7 +73,7 @@ class _BottombarState extends State<Bottombar> {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         IconButton(onPressed: (){
-                          //Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => (Prescriptionscreen())));
+                          Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => (Docscreen())));
                         }, icon: Icon(Icons.home)),
                         Container(width: size.width*0.01),
                         IconButton(onPressed: (){}, icon: Icon(Icons.person))

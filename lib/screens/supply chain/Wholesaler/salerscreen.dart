@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:seltzer_build1/screens/login.dart';
+import 'package:seltzer_build1/screens/roleselection.dart';
 import 'package:seltzer_build1/screens/supply%20chain/Wholesaler/Widget/salerbottomnav.dart';
 
 
@@ -52,7 +53,7 @@ class _SalerscreenState extends State<Salerscreen> {
                         )),
                     SizedBox(height: 15,),
                     ActionChip(label: Text("logout"), onPressed: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => Login()));
+                      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => PostRoleselection()));
                     },
                       backgroundColor: Colors.amber,
                     )

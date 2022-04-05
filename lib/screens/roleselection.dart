@@ -39,6 +39,26 @@ class _PostRoleselectionState extends State<PostRoleselection> {
       ),
 
     );
+
+    final loginbut = Material(
+      elevation: 5,
+      borderRadius: BorderRadius.circular(30),
+      color: Colors.amber,
+      child : MaterialButton(
+        padding: EdgeInsets.fromLTRB(20, 15, 20, 15) ,
+        minWidth: MediaQuery.of(context).size.width * 0.7,
+        onPressed: () {
+          Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Docscreen()));
+        },
+        child: Text("Visit demo login", textAlign: TextAlign.center,
+          style: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.bold
+          ),),
+      ),
+
+    );
+
     final patientbutton = Material(
       elevation: 5,
       borderRadius: BorderRadius.circular(30),
@@ -86,7 +106,7 @@ class _PostRoleselectionState extends State<PostRoleselection> {
           padding: EdgeInsets.fromLTRB(20, 15, 20, 15) ,
           minWidth: MediaQuery.of(context).size.width*0.7,
           onPressed: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context) => Pharmascreen()));
+            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Pharmascreen()));
           },
           child: Text("retailer", textAlign: TextAlign.center,
             style: TextStyle(
@@ -122,7 +142,7 @@ class _PostRoleselectionState extends State<PostRoleselection> {
         padding: EdgeInsets.fromLTRB(20, 15, 20, 15) ,
         minWidth: MediaQuery.of(context).size.width*0.7,
         onPressed: () {
-          Navigator.push(context, MaterialPageRoute(builder: (context) => Salerscreen()));
+          Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Salerscreen()));
         },
         child: Text("Wholesaler", textAlign: TextAlign.center,
           style: TextStyle(
@@ -145,6 +165,11 @@ class _PostRoleselectionState extends State<PostRoleselection> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
+            Text("* For demo purposes the login and registration screen has been disabled",
+            style: TextStyle(
+              fontSize: 12,
+              color: Colors.red,
+            ),),
             SizedBox(
               height: size.height * 0.13,
               child: Image.asset('as/seltzer.png',
